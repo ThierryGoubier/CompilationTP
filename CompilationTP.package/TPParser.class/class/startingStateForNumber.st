@@ -1,0 +1,3 @@
+generated
+startingStateForNumber
+	^ 1
