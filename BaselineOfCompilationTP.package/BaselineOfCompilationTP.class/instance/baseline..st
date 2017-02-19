@@ -4,7 +4,9 @@ baseline: spec
 	spec
 		for: #common
 		do: [ spec blessing: #baseline.
-			spec package: 'CompilationTP'.
 			spec
 				baseline: 'SmaCC'
-				with: [ spec repository: 'github://ThierryGoubier/SmaCC' ] ]
+				with: [ spec repository: 'github://ThierryGoubier/SmaCC' ].
+			spec
+				package: 'CompilationTP'
+				with: [ spec requires: 'SmaCC-Development' ] ]
