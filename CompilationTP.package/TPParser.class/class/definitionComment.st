@@ -5,8 +5,8 @@ definitionComment
 <whitespace>    :       \s+;
 
 Line:
-	Expression {'1'}
-	| Print {'1'}
+	Expression "";"" {'1'}
+	| Print "";"" {'1'}
 	;
 
 Expression:

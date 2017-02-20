@@ -2,35 +2,28 @@ generated
 scanForToken
 	self step.
 	currentCharacter == $(
-		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(6) ].
 	currentCharacter == $)
-		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
 	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
-	currentCharacter == $+
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-	currentCharacter == $-
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
-	currentCharacter == $/
 		ifTrue: [ ^ self recordAndReportMatch: #(3) ].
+	currentCharacter == $+
+		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
+	currentCharacter == $-
+		ifTrue: [ ^ self recordAndReportMatch: #(4) ].
+	currentCharacter == $/
+		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+	currentCharacter == $;
+		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
 	currentCharacter == $p
 		ifTrue: [ (self scanForString: 'rint')
-				ifTrue: [ ^ self recordAndReportMatch: #(6) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(7) ].
 			^ self reportLastMatch ].
 	currentCharacter isDigit
-		ifTrue: [ [ self recordMatch: #(8).
-			self step.
-			currentCharacter == $.
-				ifTrue: [ [ self recordMatch: #(8).
-					self step.
-					currentCharacter isDigit ] whileTrue.
-					^ self reportLastMatch ].
-			currentCharacter isDigit ] whileTrue.
-			^ self reportLastMatch ].
+		ifTrue:
+			[ ^ self scanForTokenX1 ].
 	(currentCharacter isSeparator
 		or: [ currentCharacter == Character pageUp ])
-		ifTrue: [ [ self recordMatch: #(9).
-			self step.
-			currentCharacter isSeparator
-				or: [ currentCharacter == Character pageUp ] ] whileTrue ].
+		ifTrue:
+			[ self scanForTokenX2 ].
 	^ self reportLastMatch
