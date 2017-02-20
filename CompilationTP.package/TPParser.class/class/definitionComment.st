@@ -4,6 +4,23 @@ definitionComment
 
 <whitespace>    :       \s+;
 
-Number 
-	: <number>
+Line:
+	Expression {'1'}
+	| Print {'1'}
+	;
+
+Expression:
+	Expression Expression ""+"" {'1' + '2'}
+	| Expression Expression ""-"" {'1' - '2'}
+	| Expression Expression ""*"" {'1' * '2'}
+	| Expression Expression ""/"" {'1' // '2'}
+	| Number {'1'}
+	;
+
+Number:
+	<number> {'1' value asNumber}
+	;
+
+Print:
+	""print"" ""("" "")"" {self output: 'printing something'}
 	;"

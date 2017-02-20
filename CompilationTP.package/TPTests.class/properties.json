@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"errorStream",
-		"outputStream",
-		"exitStatus" ],
-	"name" : "TPParser",
+		 ],
+	"name" : "TPTests",
 	"pools" : [
 		 ],
-	"super" : "SmaCCParser",
+	"super" : "TestCase",
 	"type" : "normal" }

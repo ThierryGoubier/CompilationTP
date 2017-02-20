@@ -1,3 +1,3 @@
 generated
 symbolNames
-	^ #('<number>' '<whitespace>' 'Number' 'E O F' 'error' 'B e g i n')
+	^ #('"-"' '"+"' '"/"' '"*"' '"("' '"print"' '")"' '<number>' '<whitespace>' 'Line' 'B e g i n' 'Number' 'Print' 'E O F' 'error' 'Expression')

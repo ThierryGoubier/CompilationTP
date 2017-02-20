@@ -1,3 +1,0 @@
-generated
-startingStateForNumber
-	^ 1

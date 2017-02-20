@@ -1,0 +1,3 @@
+generated
+startingStateForLine
+	^ 1

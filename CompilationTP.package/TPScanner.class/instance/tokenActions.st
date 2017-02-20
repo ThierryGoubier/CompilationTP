@@ -1,3 +1,3 @@
 generated
 tokenActions
-	^ #(nil #whitespace)
+	^ #(nil nil nil nil nil nil nil nil #whitespace)
