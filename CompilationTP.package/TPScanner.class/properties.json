@@ -1,14 +1,11 @@
 {
-	"category" : "CompilationTP",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "TPScanner",
-	"pools" : [
-		 ],
 	"super" : "SmaCCScanner",
-	"type" : "normal" }
+	"category" : "CompilationTP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TPScanner",
+	"type" : "normal"
+}

@@ -1,11 +1,8 @@
 generated
 scanForTokenX1
-	[ self recordMatch: #(9).
+	[ self recordMatch: #(11).
 	self step.
-	currentCharacter == $.
-		ifTrue: [ [ self recordMatch: #(9).
-			self step.
-			currentCharacter isDigit ] whileTrue.
-			^ self reportLastMatch ].
-	currentCharacter isDigit ] whileTrue.
-	^ self reportLastMatch
+	(currentCharacter between: $0 and: $9)
+		or: [ (currentCharacter between: $A and: $Z)
+				or: [ currentCharacter == $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
+		whileTrue

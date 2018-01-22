@@ -1,3 +1,3 @@
 generated
 symbolNames
-	^ #('"+"' '";"' '"*"' '"-"' '")"' '"("' '"print"' '"/"' '<number>' '<whitespace>' 'Line' 'B e g i n' 'Number' 'Print' 'E O F' 'error' 'Expression')
+	^ #('"+"' '"="' '"print"' '"-"' '";"' '")"' '"("' '"*"' '"/"' '<number>' '<identifier>' '<whitespace>' 'B e g i n' 'Print' 'Expression' 'Term' 'Factor' 'Number' 'Identifier' 'Expression_Statement' 'E O F' 'error' 'Line')

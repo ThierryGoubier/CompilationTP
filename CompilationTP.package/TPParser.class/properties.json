@@ -1,16 +1,16 @@
 {
-	"category" : "CompilationTP",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "SmaCCParser",
+	"category" : "CompilationTP",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"errorStream",
 		"outputStream",
-		"exitStatus" ],
+		"exitStatus",
+		"symbols"
+	],
 	"name" : "TPParser",
-	"pools" : [
-		 ],
-	"super" : "SmaCCParser",
-	"type" : "normal" }
+	"type" : "normal"
+}
